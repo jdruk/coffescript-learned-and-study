@@ -26,3 +26,26 @@ for word in stringArray
 
 # Operações com string praticamente iguais a do java
 output.insertAdjacentHTML('beforeend', longString.length)
+
+ternarioNull = null
+idade = 18
+# açucar sintático da linguagem! é permitido tanto espaço quanto não
+if idade?
+  output.insertAdjacentHTML("beforeend", "<br>idade")
+if velho?
+  output.insertAdjacentHTML("beforeend", "velho")
+
+#
+checando = ternario ? "Segunda opção"
+output.insertAdjacentHTML("beforeend", "<br>#{checando}")
+
+day = 'Sun'
+switch day
+  when "Mon"
+    go work
+  when "Tue" then go relax
+  when "Thu" then go iceFishing
+  when "Sun" then output.insertAdjacentHTML("beforeend", "<br>oi")
+  else go work
+
+# quando a operação necessita mais de uma linha o operador then não é necessário

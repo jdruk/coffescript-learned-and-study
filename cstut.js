@@ -4,7 +4,7 @@
     browser-sync --server --files "."
     coffee -wc *.coffee
   */
-  var i, isBoolean, len, longString, name, output, stringArray, word;
+  var checando, day, i, idade, isBoolean, len, longString, name, output, stringArray, ternarioNull, word;
 
   name = 'josafa';
 
@@ -40,5 +40,44 @@
 
   // Operações com string praticamente iguais a do java
   output.insertAdjacentHTML('beforeend', longString.length);
+
+  ternarioNull = null;
+
+  idade = 18;
+
+  // açucar sintático da linguagem! é permitido tanto espaço quanto não
+  if (idade != null) {
+    output.insertAdjacentHTML("beforeend", "<br>idade");
+  }
+
+  if (typeof velho !== "undefined" && velho !== null) {
+    output.insertAdjacentHTML("beforeend", "velho");
+  }
+
+  
+  checando = typeof ternario !== "undefined" && ternario !== null ? ternario : "Segunda opção";
+
+  output.insertAdjacentHTML("beforeend", `<br>${checando}`);
+
+  day = 'Sun';
+
+  switch (day) {
+    case "Mon":
+      go(work);
+      break;
+    case "Tue":
+      go(relax);
+      break;
+    case "Thu":
+      go(iceFishing);
+      break;
+    case "Sun":
+      output.insertAdjacentHTML("beforeend", "<br>oi");
+      break;
+    default:
+      go(work);
+  }
+
+  // quando a operação necessita mais de uma linha o operador then não é necessário
 
 }).call(this);
